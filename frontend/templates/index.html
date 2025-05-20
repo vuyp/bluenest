@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueNest - Feed</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BlueNest Feed</h1>
+        <div class="create-post">
+            <h2>Create New Post</h2>
+            <form id="createPostForm">
+                <div>
+                    <label for="postContent">What's on your mind?</label>
+                    <textarea id="postContent" name="content" rows="3" required></textarea>
+                </div>
+                <button type="submit">Post</button>
+            </form>
+            <div class="loader" id="createPostLoader" style="display: none;"></div>
+            <div id="postMessage"></div>
+        </div>
+
+        <hr>
+
+        <div class="posts-section">
+            <h2>Posts</h2>
+            <div id="postsLoader" class="loader" style="display: none;"></div> <!-- Loader for initial post fetch -->
+            <div id="postsContainer">
+                <!-- Posts will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
